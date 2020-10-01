@@ -1,0 +1,10 @@
+extends template.pug
+include libs/mixins.pug
+block content
+	main
+		h1 Bolsas
+		+crumsList("Bolsas")
+
+		section.product-list
+			each bagProduct in bagProducts
+				+productDetail(bagProduct.link, bagProduct.image, bagProduct.title, bagProduct.price)
